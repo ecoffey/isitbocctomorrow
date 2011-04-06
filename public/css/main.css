@@ -11,3 +11,7 @@
 .about {
   width: 100%;
   text-align: center; }
+  .about .bocc_link {
+    font-size: 1.5em; }
+  .about .small {
+    font-size: .8em; }
