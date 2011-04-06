@@ -1,0 +1,12 @@
+.inner {
+  margin: 0 auto;
+  width: 80%; }
+
+.status h1 {
+  text-transform: uppercase;
+  font-size: 9em;
+  text-align: center; }
+
+.about {
+  width: 100%;
+  text-align: center; }
