@@ -9,6 +9,7 @@ module IsItBoccTomorrow
     seed = DateTime.new(2011, 03, 29)
 
     get '/' do
+      response.headers['Cache-Control'] = 'public, max-age=600'
       tomorrow = Time.now.tomorrow.utc.in_time_zone("Mountain Time (US & Canada)").to_date
 
       diff_days = (tomorrow - seed).to_i
