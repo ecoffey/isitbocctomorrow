@@ -1,4 +1,3 @@
-require 'mongo'
 require 'sinatra/base'
 require 'haml'
 require 'active_support/time'
@@ -10,7 +9,6 @@ module IsItBoccTomorrow
     seed = DateTime.new(2011, 03, 15)
 
     get '/' do
-      log_request
       now = Time.now.utc.in_time_zone("Mountain Time (US & Canada)")
       tomorrow = now.tomorrow.to_date
 
@@ -27,17 +25,7 @@ module IsItBoccTomorrow
 
       seconds_till_midnight = (tomorrow.midnight.advance(:minutes => 5) - now).to_i
 
-      response.headers['Cache-Control'] = "public, max-age=#{seconds_till_midnight}, must-revalidate"
-
       haml :index
     end
-
-    private
-      def log_request
-        db = Mongo::Connection.new('flame.mongohq.com', 27097).db('isitbocctomorrow')
-        db.authenticate('db_user', 'mun2ster')
-
-        db[ENV['RACK_ENV']].insert({'time' => Time.now.ctime})
-      end
   end
 end
