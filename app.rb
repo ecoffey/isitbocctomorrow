@@ -27,7 +27,7 @@ module IsItBoccTomorrow
 
       seconds_till_midnight = (tomorrow.midnight.advance(:minutes => 5) - now).to_i
 
-      response.headers['Cache-Control'] = "max-age=#{seconds_till_midnight}, must-revalidate"
+      response.headers['Cache-Control'] = "max-age=#{seconds_till_midnight}"
 
       haml :index
     end
