@@ -9,9 +9,8 @@ module IsItBoccTomorrow
     seed = DateTime.new(2011, 03, 15)
 
     get '/' do
-      response.headers['Cache-Control'] = 'public, max-age=600'
-
-      tomorrow = Time.now.tomorrow.utc.in_time_zone("Mountain Time (US & Canada)").to_date
+      now = Time.now.utc.in_time_zone("Mountain Time (US & Canada)")
+      tomorrow = now.tomorrow.to_date
 
       @diff_days = (tomorrow - seed).to_i % 14
 
@@ -23,6 +22,10 @@ module IsItBoccTomorrow
       @last_bocc = last_bocc.to_formatted_s(:long_ordinal)
       @next_bocc = next_bocc.to_formatted_s(:long_ordinal)
       @is_bocc_tomorrow = @diff_days == 0 ? "yes" : "no"
+
+      seconds_till_midnight = tomorrow.midnight.advance(:minutes => 5) - now
+
+      response.headers['Cache-Control'] = "max-age=#{seconds_till_midnight}, must-revalidate"
 
       haml :index
     end
