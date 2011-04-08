@@ -17,6 +17,8 @@
     %div
       .status
         %h1= @is_bocc_tomorrow
+        .info Last #BOCC was #{@last_bocc}
+        .info Next #BOCC is #{@next_bocc} (in #{@days_till_next_bocc} days)
       .about
         %p.bocc_link
           %a{:href => 'http://boulderopencoffeeclub.com'} boulderopencoffeeclub.com

@@ -2,13 +2,20 @@
   margin: 0 auto;
   width: 80%; }
 
-.status h1 {
-  font-family: Helevtica, sans-serif;
-  text-transform: uppercase;
-  font-size: 9em;
+.status {
+  width: 100%; }
+  .status h1 {
+    font-family: Helevtica, sans-serif;
+    text-transform: uppercase;
+    font-size: 9em;
+    text-align: center; }
+
+.info {
+  width: 100%;
   text-align: center; }
 
 .about {
+  clear: both;
   width: 100%;
   text-align: center; }
   .about .bocc_link {

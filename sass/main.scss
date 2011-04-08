@@ -4,6 +4,7 @@
 }
 
 .status {
+  width: 100%;
   h1 {
     font-family: Helevtica, sans-serif;
     text-transform: uppercase;
@@ -12,7 +13,13 @@
   }
 }
 
+.info {
+  width: 100%;
+  text-align: center;
+}
+
 .about {
+  clear: both;
   width: 100%;
   text-align: center;
 
