@@ -23,8 +23,6 @@ module IsItBoccTomorrow
       @next_bocc = next_bocc.to_formatted_s(:long_ordinal)
       @is_bocc_tomorrow = @diff_days == 0 ? "yes" : "no"
 
-      seconds_till_midnight = (tomorrow.midnight.advance(:minutes => 5) - now).to_i
-
       haml :index
     end
   end
