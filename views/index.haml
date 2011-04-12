@@ -14,16 +14,17 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
   %body
-    %div
-      .status
-        %h1= @is_bocc_tomorrow
-        .info Last #BOCC was #{@last_bocc}
-        .info Next #BOCC is #{@next_bocc} (in #{@days_till_next_bocc})
-      .about
-        %p.bocc_link
-          %a{:href => 'http://boulderopencoffeeclub.com'} boulderopencoffeeclub.com
-        %p.small
-          made by
-          %a{:href => 'http://eoinisawesome.com'} eoin
-          |
-          %a{:href => 'http://github.com/ecoffey/isitbocctomorrow'} code
+    .status
+      %h1= @is_bocc_tomorrow
+      %p.info Last #BOCC was #{@last_bocc}
+      %p.info Next #BOCC is #{@next_bocc} (in #{@days_till_next_bocc})
+      %p.bocc_link
+        %a{:href => 'http://boulderopencoffeeclub.com'} boulderopencoffeeclub.com
+    .about
+      %p.small
+        status is computed, might be wrong, check official link
+      %p.small
+        made by
+        %a{:href => 'http://eoinisawesome.com'} eoin
+        |
+        %a{:href => 'http://github.com/ecoffey/isitbocctomorrow'} code
