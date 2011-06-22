@@ -23,7 +23,6 @@ module IsItBoccTomorrow
       @days_till_next_bocc =
         days_till_next_bocc > 1 ? "#{days_till_next_bocc} days" : "#{days_till_next_bocc} day"
 
-
       @last_bocc = last_bocc.to_formatted_s(:long_ordinal)
       @next_bocc = next_bocc.to_formatted_s(:long_ordinal)
       @is_bocc_tomorrow = diff_days_tomorrow == 0 ? "yes" : "no"
