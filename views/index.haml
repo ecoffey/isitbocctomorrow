@@ -15,7 +15,7 @@
       })();
   %body
     .status
-      %h1= @is_bocc_tomorrow
+      %h1{:class => @is_bocc_tomorrow}= @is_bocc_tomorrow
       %p.info Last #BOCC was #{@last_bocc}
       %p.info Next #BOCC is #{@next_bocc} (in #{@days_till_next_bocc})
       %p.bocc_link
