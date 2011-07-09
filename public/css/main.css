@@ -1,25 +1,28 @@
 body {
   font-family: Helevtica, sans-serif;
-  text-align: center; }
-
-.no {
-  color: red; }
-
-.yes {
-  color: green; }
+  text-align: center;
+}
 
 .status {
-  margin-bottom: 4em; }
-  .status h1 {
-    text-transform: uppercase;
-    font-size: 9em;
-    text-align: center;
-    margin: 0 auto; }
-  .status .bocc_link {
-    font-size: 1.5em; }
+  margin-bottom: 4em;
+}
+
+.status h1 {
+  text-transform: uppercase;
+  font-size: 9em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.status .bocc_link {
+  font-size: 1.5em;
+}
 
 .about {
   clear: both;
-  width: 100%; }
-  .about .small {
-    font-size: .8em; }
+  width: 100%;
+}
+
+.about .small {
+  font-size: .8em;
+}

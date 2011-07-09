@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>is it bocc tomorrow?</title>
+    <link href="/css/main.css" rel="stylesheet" />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22550563-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="status">
+      <h1 class="<%= @is_bocc_tomorrow %>">
+        <%= @is_bocc_tomorrow %>
+      </h1>
+      <p class="info">
+        Last #BOCC was <%= @last_bocc %>
+      </p>
+      <p class="info">
+        Next #BOCC is <%= @next_bocc %> (in <%= @days_till_next_bocc %>)
+      </p>
+      <p class="bocc_link">
+        <a href="http://boulderopencoffeeclub.com">boulderopencoffeeclub.com</a>
+      </p>
+    </div>
+    <div class="about">
+      <p class="small">
+        status is computed, might be wrong, check official link
+      </p>
+      <p class="small">
+        made by
+        <a href="http://eoinisawesome.com">eoin</a>
+        |
+        <a href="http://github.com/ecoffey/isitbocctomorrow">code</a>
+      </p>
+    </div>
+  </body>
+</html>
+

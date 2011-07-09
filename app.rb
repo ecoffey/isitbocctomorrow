@@ -27,7 +27,7 @@ module IsItBoccTomorrow
       @next_bocc = next_bocc.to_formatted_s(:long_ordinal)
       @is_bocc_tomorrow = diff_days_tomorrow == 0 ? "yes" : "no"
 
-      haml :index
+      erb :index
     end
   end
 end
