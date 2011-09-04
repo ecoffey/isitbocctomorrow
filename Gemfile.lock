@@ -2,23 +2,36 @@ GEM
   remote: http://rubygems.org/
   specs:
     activesupport (3.0.5)
+    foreman (0.20.0)
+      term-ansicolor (~> 1.0.5)
+      thor (>= 0.13.6)
     haml (3.0.25)
     i18n (0.5.0)
+    kgio (2.6.0)
     rack (1.2.2)
+    raindrops (0.7.0)
     sass (3.1.1)
     sinatra (1.2.1)
       rack (~> 1.1)
       tilt (< 2.0, >= 1.2.2)
+    term-ansicolor (1.0.6)
+    thor (0.14.6)
     tilt (1.2.2)
     tzinfo (0.3.25)
+    unicorn (4.1.1)
+      kgio (~> 2.4)
+      rack
+      raindrops (~> 0.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activesupport
+  foreman
   haml
   i18n
   sass
   sinatra
   tzinfo
+  unicorn

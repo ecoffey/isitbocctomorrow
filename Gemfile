@@ -6,3 +6,6 @@ gem 'activesupport'
 gem 'sinatra'
 gem 'haml'
 gem 'sass'
+
+gem 'unicorn'
+gem 'foreman'
