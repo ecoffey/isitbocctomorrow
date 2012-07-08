@@ -1,7 +1,14 @@
-path = File.expand_path "../", __FILE__
+require 'rubygems'
+require 'bundler'
 
-require "#{path}/app"
+Bundler.setup
+Bundler.require
 
-use Rack::Static, :urls => ["/css", "/js", "/images"], :root => "public"
+IsItOpenCoffeeTomorrow::Application.configure do |app|
+  app.set :hash_tag, "#BOCC"
+  app.set :seed, DateTime.new(2011, 03, 15)
+  app.set :time_zone, "Mountain Time (US & Canada)"
+  app.set :official_site, "http://boulderopencoffeeclub.com"
+end
 
-run IsItBoccTomorrow::Application
+run IsItOpenCoffeeTomorrow::Application
