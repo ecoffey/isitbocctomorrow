@@ -1,3 +1,3 @@
 source :rubygems
 
-gem 'isitopencoffeetomorrow'
+gem "isitopencoffeetomorrow", "~> 0.2.0"
